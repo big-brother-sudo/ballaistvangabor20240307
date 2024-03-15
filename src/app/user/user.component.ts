@@ -9,7 +9,9 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class UserComponent implements OnInit {
 
-  userData: any;
+//2b. feladat
+// a userData osztályváltozó típusának beállítsa User típusúra
+  userData: User;
 
   constructor(
     private route: ActivatedRoute,
@@ -23,10 +25,11 @@ export class UserComponent implements OnInit {
     //alert(this.id)
     this.getUser(this.id)
   }
-
+//2a. feladat 
+// GET kérés típusának beállítása User típusúra:
   getUser(id: string){
     let url = "https://jsonplaceholder.typicode.com/users/" + id;
-    this.http.get<any>(url).subscribe(
+    this.http.get<User>(url).subscribe(
       res=>{
         this.userData = res;
       }
