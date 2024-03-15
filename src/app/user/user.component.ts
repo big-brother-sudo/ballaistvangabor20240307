@@ -35,7 +35,9 @@ export class UserComponent implements OnInit {
 
 }
 
-//Megcsinálni a https://jsonplaceholder.typicode.com/users/1 responsa alapján
+//1. feladat
+// Minden tulajdonság definiálása az User típusban a https://jsonplaceholder.typicode.com/users/1
+// responsa alapján:
 type User = {
   id: number,
   name: string,
